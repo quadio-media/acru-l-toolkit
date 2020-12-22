@@ -1,3 +1,5 @@
+from typing import Dict, Any
+
 from acrul_toolkit.custom_resources import CustomResourceEventHandler
 
 
@@ -17,14 +19,14 @@ class DummyHandler(CustomResourceEventHandler):
         self.deleted = not self.deleted
 
 
-CONTEXT = {}
+CONTEXT: Dict[str, Any] = {}
 
 
 def generate_event(request_type: str):
     return {
         "ResourceProperties": {},
         "PhysicalResourceId": "id",
-        "RequestType": request_type
+        "RequestType": request_type,
     }
 
 
