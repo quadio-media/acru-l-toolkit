@@ -1,6 +1,6 @@
 # ACRU-L Toolkit
 
-_ə-kroo͞′əl Toolkit_
+Pronounced _Ah-crew-el (*ə-kroo͞′l*)_ Toolkit
 
 Partner library to [ACRU-L](https://github.com/quadio-media/acru-l).
 
