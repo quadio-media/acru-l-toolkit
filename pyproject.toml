@@ -36,7 +36,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.coverage.run]
 source = [
-    "src/acrul_toolkit",
+    "acrul_toolkit"
 ]
 omit = [
     "tests/*",
@@ -48,6 +48,9 @@ omit = [
     "tests/*",
     "factories/*"
 ]
+show_missing = true
+skip_empty = true
+fail_under = 70
 
 [tool.black]
 line-length = 79

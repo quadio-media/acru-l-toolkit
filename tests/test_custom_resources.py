@@ -1,3 +1,4 @@
+import pytest
 from typing import Dict, Any
 
 from acrul_toolkit.custom_resources import CustomResourceEventHandler
@@ -14,6 +15,7 @@ class DummyHandler(CustomResourceEventHandler):
 
     def on_create(self, event):
         self.created = not self.created
+        return event["PhysicalResourceId"]
 
     def on_delete(self, event):
         self.deleted = not self.deleted
@@ -49,3 +51,18 @@ def test_delete_event():
     assert not dummy.deleted
     dummy(generate_event("Delete"), CONTEXT)
     assert dummy.deleted
+
+
+def test_interface():
+    interface = CustomResourceEventHandler()
+    with pytest.raises(NotImplementedError):
+        interface.on_create({})
+
+    with pytest.raises(NotImplementedError):
+        interface.on_update({})
+
+    with pytest.raises(NotImplementedError):
+        interface.on_delete({})
+
+    with pytest.raises(ValueError):
+        interface({"RequestType": "Wrong"}, CONTEXT)
