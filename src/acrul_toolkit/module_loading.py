@@ -1,11 +1,11 @@
-# SOURCED FROM: https://docs.djangoproject.com/en/3.1/_modules/django/utils/module_loading/
+# https://docs.djangoproject.com/en/3.1/_modules/django/utils/module_loading/
 from importlib import import_module
 
 
 def import_string(path: str):
     """
-    Import a dotted module path and return the attribute/class designated by the
-    last name in the path. Raise ImportError if the import failed.
+    Import a dotted module path and return the attribute/class designated by
+    the last name in the path. Raise ImportError if the import failed.
     """
     try:
         module_path, class_name = path.rsplit(".", 1)
