@@ -1,5 +1,7 @@
+import toml
 from acrul_toolkit import __version__
 
 
 def test_version():
-    assert __version__ == "0.1.0"
+    version = toml.load("./pyproject.toml")["tool"]["poetry"]["version"]
+    assert __version__ == version

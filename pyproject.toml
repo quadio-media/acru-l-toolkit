@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "acru-l-toolkit"
-version = "0.1.0"
+version = "1.0.0-alpha"
 description = ""
 authors = ["Anthony Almarza <anthony.almarza@gmail.com>"]
 license = "MIT"
@@ -29,6 +29,19 @@ factory-boy = "^3.1.0"
 codecov = "^2.1.11"
 coverage = {extras = ["toml"], version = "^5.3"}
 ipython = "^7.19.0"
+pre-commit = "^2.9.3"
+Sphinx = "^3.4.1"
+sphinx-sitemap = "^2.2.0"
+sphinx-pyreverse = "^0.0.13"
+sphinx-autodoc-typehints = "^1.11.1"
+sphinx-autobuild = "^2020.9.1"
+recommonmark = "^0.7.1"
+
+[tool.poetry.scripts]
+tests = "scripts.tests:main"
+docs-autobuild = "scripts.docs_autobuild:main"
+docs-build = "scripts.docs_build:main"
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
