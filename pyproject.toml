@@ -8,7 +8,16 @@ readme = "README.md"
 packages = [
     { include = "acrul_toolkit", from = "src" },
 ]
-
+# https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    #"Development Status :: 4 - Beta",
+    #"Development Status :: 5 - Production/Stable",
+    #"Development Status :: 6 - Mature",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
