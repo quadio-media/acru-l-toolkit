@@ -45,8 +45,9 @@ sphinx-pyreverse = "^0.0.13"
 sphinx-autodoc-typehints = "^1.11.1"
 sphinx-autobuild = "^2020.9.1"
 recommonmark = "^0.7.1"
+pyproject-script = "^0.0.0-alpha.0"
 
-[tool.poetry.scripts]
+[tool.pyscript]
 tests = "scripts.tests:main"
 docs-autobuild = "scripts.docs_autobuild:main"
 docs-build = "scripts.docs_build:main"
